@@ -7,7 +7,7 @@ fn get_player_names(total_players: i32) -> Vec<String> {
     
     for _ in 0..total_players {
         print!("Enter player name: ");
-        io::stdout().flush();
+        io::stdout().flush().expect("Failed to flush stdout");
 
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Failed to read line");
@@ -20,7 +20,7 @@ fn get_player_names(total_players: i32) -> Vec<String> {
 
 fn main() {
     print!("Total number of players: ");
-    io::stdout().flush();
+    io::stdout().flush().expect("Failed to flush stdout");
 
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Failed to read line");
