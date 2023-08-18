@@ -46,4 +46,11 @@ fn main() {
             match_num += 1;
         }
     }
+
+    // print match pool
+    println!();
+    println!("Match Pool:");
+    for match_pair in &match_pool {
+        println!("{}", match_pair);
+    }
 }
