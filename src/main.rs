@@ -33,4 +33,17 @@ fn main() {
 
     // get player names in a list
     let player_names: Vec<String> = get_player_names(total_players);
+
+    let mut match_num: i32 = 1;
+    let mut match_pool: Vec<String> = Vec::new();
+    for i in 0..total_matches - 1 {
+        for j in i + 1..total_players {
+            let player_one: &String = &player_names[i as usize];
+            let player_two: &String = &player_names[j as usize];
+            let match_up: String = format!("{}. {} VS {}", match_num, player_one, player_two);
+
+            match_pool.push(match_up);
+            match_num += 1;
+        }
+    }
 }
