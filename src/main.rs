@@ -1,5 +1,5 @@
 // script to generate match pools
-use std::io::{self, Write};
+use std::io::{self, Write, stdin};
 
 fn get_player_names(total_players: i32) -> Vec<String> {
     let mut player_names: Vec<String> = Vec::new();
@@ -56,4 +56,9 @@ fn main() {
     for match_pair in &match_pool {
         println!("{}", match_pair);
     }
+
+    // exit
+    println!("\nPress any key to exit");
+    let mut exit = String::new();
+    stdin().read_line(&mut exit).expect("failed to read");
 }
